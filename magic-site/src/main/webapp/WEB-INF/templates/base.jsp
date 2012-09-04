@@ -11,6 +11,7 @@
 			<tiles:insertAttribute name="header" />
 			<tiles:insertAttribute name="menu" />
 			<tiles:insertAttribute name="body" />
+			<hr/>
 			<tiles:insertAttribute name="footer" />
 		</div>
 	</body>

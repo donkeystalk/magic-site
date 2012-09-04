@@ -26,5 +26,6 @@
 	<mvc:resources location="/resources/" mapping="/resources/**"/>
 	
 	<mvc:view-controller path="/" view-name="home"/>
+	<mvc:view-controller path="/card" view-name="card"/>
 		
 </beans>

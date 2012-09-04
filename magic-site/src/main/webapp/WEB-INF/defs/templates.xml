@@ -13,9 +13,12 @@
     <put-attribute name="footer" value="/WEB-INF/templates/footer.jsp" />
   </definition>
   
-  <!-- Just used for ajax calls to input html content -->
   <definition name="home" extends=".base">
   	<put-attribute name="body" value="/WEB-INF/views/home.jsp" />
+  </definition>
+  
+  <definition name="card" extends=".base">
+  	<put-attribute name="body" value="/WEB-INF/views/card.jsp" />
   </definition>
 
   
