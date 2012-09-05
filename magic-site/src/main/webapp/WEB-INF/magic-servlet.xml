@@ -23,6 +23,16 @@
 		</property>
 	</bean>
 	
+	<bean id="badRequestMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+	 	<property name="mappings">
+	 		<map>
+	 			<entry key="/**" value="errorHandler"/>
+	 		</map>
+	 	</property>
+	</bean>
+	
+	<bean id="errorHandler" class="com.dardo.side.magic.web.controllers.ErrorHandler" />
+	
 	<mvc:resources location="/resources/" mapping="/resources/**"/>
 	
 	<mvc:view-controller path="/" view-name="home"/>
