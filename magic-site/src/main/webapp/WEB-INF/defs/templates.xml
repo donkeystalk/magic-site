@@ -20,6 +20,9 @@
   <definition name="card" extends=".base">
   	<put-attribute name="body" value="/WEB-INF/views/card.jsp" />
   </definition>
-
+  
+  <definition name="list" extends=".base">
+  	<put-attribute name="body" value="/WEB-INF/views/list.jsp" />
+  </definition>
   
 </tiles-definitions>
