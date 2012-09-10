@@ -36,6 +36,19 @@ public class CardController {
 		HttpSession session = request.getSession();
 		Item item = itemRepository.findItemById(id);
 		List<Item> items = (List<Item>) session.getAttribute("cart");
+		if(item.getNumVotes() == 0 || item.getNumVotes() == null)
+		{
+			session.setAttribute("rating", 0);
+		}
+		else
+		{
+			/** There are 5 stars on the rating screen each with 14px in width 5*14 = 70
+			 * Multiply this by the percentage from the (score / num votes) / 5 (i.e. 1 vote of 5 stars = 5 / 1 = 5 / 5 = 1.0 * 70 = 70px, 
+			 * or show all 5 stars.
+			 */
+			float rating = ((((float)item.getScore() / (float)item.getNumVotes()) / 5)) * 70;
+			session.setAttribute("rating", rating);
+		}
 		if(items == null)
 		{
 			items = new ArrayList<Item>();

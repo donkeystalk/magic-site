@@ -1,0 +1,31 @@
+.card-placeholder
+{
+	width: 165px;
+	height: 225px;
+	border: 1px solid #AAA;
+	background-color: #DDD;
+}
+
+.rating-wrapper
+{
+	position: relative;
+	height: 20px;
+	width: 70px;
+	padding: 5px;
+	background: #DDD;
+}
+
+.rating-stars
+{
+	height: 16px;
+	width: 70px;
+}
+
+.filled-wrapper
+{
+	position: absolute;
+	overflow: hidden;
+	height: 18px;
+	top: 5px;
+	left: 5px;
+}
