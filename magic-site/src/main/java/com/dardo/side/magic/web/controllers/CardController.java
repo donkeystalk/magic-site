@@ -46,7 +46,7 @@ public class CardController {
 			 * Multiply this by the percentage from the (score / num votes) / 5 (i.e. 1 vote of 5 stars = 5 / 1 = 5 / 5 = 1.0 * 70 = 70px, 
 			 * or show all 5 stars.
 			 */
-			float rating = ((((float)item.getScore() / (float)item.getNumVotes()) / 5)) * 70;
+			float rating = (((float)item.getScore() / (float)item.getNumVotes()) / 5) * 70;
 			session.setAttribute("rating", rating);
 		}
 		if(items == null)
